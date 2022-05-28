@@ -1,0 +1,350 @@
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 16rem;
+}
+
+/* ============ MAIN =============== */
+
+main {
+
+}
+
+.list {
+    position: relative;
+    flex-direction: column;
+    background: var(--color-background-variant);
+    max-height: 80vh;
+    border-radius: 10px 10px 0 0;
+    overflow: scroll;
+    transition: all 300ms ease;
+    padding-top: 0;
+}
+
+.list:hover {
+    box-shadow: var(--box-shadow);
+    border: 2px solid var(--color-dark-variant);
+}
+
+.listname {
+    position: sticky;
+    top: 0;
+    height: 4rem;
+    display: grid;
+    grid-template-columns: auto 2rem 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--color-primary);
+    background: var(--color-background-variant);
+}
+
+.state {
+    background: silver;
+    height: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: x-large;
+    color: var(--color-dark);
+    margin: 1rem;
+}
+
+.icon-setter {
+    cursor: pointer;
+    transition: all 300ms ease;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.button_icon-setter {
+    background: none;
+    color: var(--color-title);
+}
+
+.icon-setter:hover {
+    transform: scale(1.2);
+}
+
+.edit-activity:hover {
+    color: var(--color-warning);
+}
+
+.del-activity:hover {
+    color: var(--color-danger);
+}
+
+.cercle {
+    border: 2px solid var(--color-title);;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.without-check-mark:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "✔";
+    padding: 0;
+    font-size: 1rem;
+}
+
+.with-check-mark::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "✔";
+    padding: 0;
+    font-size: 1rem;
+    background: var(--color-primary);
+    border-radius: 50%;
+}
+
+.activity-text {
+    text-decoration:line-through;
+}
+
+main .activity {
+    border-radius: 0;
+    border-bottom: 2px dashed rgba(133, 132, 132, 0.4);
+    display: grid;
+    grid-template-columns: 2rem auto 2rem;
+    color: var(--color-title);
+}
+
+main .add-activity {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: var(--color-background-variant);
+}
+
+main .add-activity:hover {
+    background: var(--color-background);
+}
+
+main form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main input[type="text"]
+{
+    background: transparent;
+    caret-color: var(--color-title);
+    color: var(--color-title);
+    border: none;
+    width: 100%;
+}
+
+main input::placeholder {
+    color: var(--color-primary);
+    opacity: 1;
+    font-weight: 700;
+    transition: all 300ms ease;
+}
+
+main input:focus::placeholder {
+    color: transparent;
+}
+
+/* ============ RIGHT =============== */
+.right {
+    margin-top: 1.4rem;
+}
+
+.myLists {
+    overflow: scroll;
+    max-height: 60vh;
+}
+
+
+/* ==================== SALES ANALYTICS ====================== */
+.right .sales-analytics {
+    margin-top: 2rem;
+}
+
+.right h2 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.item {
+    background: var(--color-background-variant);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    height: 4rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-3);
+    box-shadow: none;
+    transition: all 300ms ease;
+}
+
+.list-item {
+    cursor: pointer;
+}
+
+.button_list {
+    width: 100%;
+    background: none;
+}
+
+.right .list-item:hover {
+    box-shadow: var(--box-shadow);
+    border: 2px solid var(--color-dark-variant);
+}
+
+.right .list-item .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0;
+    width: 100%;
+}
+
+.right .list-item .icon {
+    padding: 0.5rem;
+    color: var(--color-white);
+    border-radius: 50%;
+    background: var(--color-primary);
+    display: flex;
+}
+
+.right .add-product {
+    position: fixed;
+    bottom: 1rem;
+    right: 1.5rem;
+    background: transparent;
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    width: 15%;
+}
+
+.right .add-product h3 {
+    color: var(--color-primary);
+    transition: all 300ms ease;
+}
+
+.right .add-product:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+.right .add-product:hover h3 {
+    color: white;
+}
+
+.right .sales-analytics .add-product h3 {
+    font-weight: 500;
+}
+
+/* ===================== MODAL SCREEN =====================*/
+
+#welcome .modal_content {
+    height: 50vh;
+}
+
+#newlist .modal_content {
+    height: 40vh;
+}
+
+.modal p {
+    font-size: large;
+    color: var(--color-title);
+    justify-content: center;
+}
+
+.modal .a_button {
+    position: absolute;
+    display: flex;
+    background: transparent;
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    width: 15rem;
+    height: 5rem;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    bottom: 2em;
+    right: 2em;
+}
+
+.modal .a_button:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+.newlist-name {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.newlist input[type="text"] {
+    width: 60%;
+    font-size: x-large;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px solid silver;
+    padding: 1rem;
+}
+
+.newlist input[type="text"]:hover {
+    border-color: var(--color-primary);
+}
+
+.newlist:target, .welcome:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal_close {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    font-size: xxx-large;
+    font-weight: bold;
+    color: var(--color-title);
+}
+
+/* ======================== MEDIA QUERIES ================= */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 94%;
+        grid-template-columns: 7rem auto;
+    }
+}
+
+/* ======================== MEDIA QUERIES ================= */
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow: scroll;
+    }
+
+    .container {
+        width: 92%;
+        grid-template-columns: auto;
+    }
+
+    .right .add-product {
+        bottom: 0;
+        right: 2%;
+        width: 13rem;
+    }
+}

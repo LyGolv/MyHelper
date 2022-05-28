@@ -1,0 +1,168 @@
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto;
+}
+
+.card:hover {
+    border: 2px solid var(--color-dark-variant);
+}
+
+.card form{
+    display: grid;
+    grid-template-columns: 16rem auto;
+    padding: 2rem;
+    font-size: x-large;
+}
+
+.user-photo {
+    width: 14rem;
+    height: 14rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.user-photo .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-photo .photo img{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+}
+
+.add-photo {
+    cursor: pointer;
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    font-size: xx-large;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.add-photo:hover {
+    transform: scale(1.3);
+    color: var(--color-primary);
+}
+
+.user-info {
+
+}
+
+.user-info, .form-pwd {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info label, .form-pwd label {
+    color: var(--color-primary);
+}
+
+.user-info input, .form-pwd input {
+    height: 3rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    background-color: var(--color-background);
+    color: var(--color-title);
+    font-size: large;
+    padding: 0.5rem;
+}
+
+.user-info input:hover, .form-pwd input:hover{
+    border: 2px solid var(--color-primary);
+}
+
+.profile-action {
+    display: grid;
+    grid-template-columns: auto 10rem;
+    margin-top: 0.5rem;
+}
+
+.user-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    background-color: var(--color-danger);
+    border-radius: 10px;
+    padding: 0.5rem;
+    gap: 0.2rem;
+    transition: all 300ms ease;
+}
+
+.user-action:hover {
+    background-color: rgba(245, 117, 128, 0.8);
+    transform: scale(1.1);
+}
+
+.user-pwd {
+    display: grid;
+    grid-template-columns: auto 16rem;
+}
+
+.user-pwd a {
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    transition: all 300ms ease;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    padding: 1rem;
+}
+
+.user-pwd a:hover {
+    transform: scale(1.1);
+}
+
+.but {
+    display: grid;
+    grid-template-columns: auto 6rem;
+    color: #5d6cea;
+    background: none;
+}
+
+.a_button:hover {
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    color: white;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    text-decoration: none;
+}
+
+a {
+    color: var(--color-title);
+}
+
+.edit-pwd:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ======================== MEDIA QUERIES ================= */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 94%;
+        grid-template-columns: 7rem auto;
+    }
+}
+
+/* ======================== MEDIA QUERIES ================= */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 92%;
+        display: block;
+    }
+}
